@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Calculator</title>
+</head>
+<body>
+  <label for="num1">Enter the first number:</label>
+  <input type="number" id="num1" placeholder="Enter first number">
+
+  <label for="num2">Enter the second number:</label>
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <button onclick="multiply()">Multiply</button>
+  <button onclick="divide()">Divide</button>
+
+  <h4 id="result"></h4>
+
+  <script>
+    function multiply() {
+      const num1 = document.getElementById("num1").value;
+      const num2 = document.getElementById("num2").value;
+
+      if (!isNaN(num1) && !isNaN(num2)) {
+        const multiplication = num1 * num2;
+
+        document.getElementById("result").innerHTML = `Multiplication result: ${multiplication}`;
+      } else {
+        document.getElementById("result").textContent = "Please enter valid numbers.";
+      }
+    }
+
+    function divide (){
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        
+        if (!isNaN(num1) && !isNaN(num2)) {
+            const division = num1 / num2;
+    
+            document.getElementById("result").innerHTML = `Division result: ${division}`;
+          } else {
+            document.getElementById("result").textContent = "Please enter valid numbers.";
+          }
+        
+    }
+  </script>
+</body>
+</html>
